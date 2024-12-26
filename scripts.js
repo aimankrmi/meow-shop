@@ -59,7 +59,7 @@ function submitForm() {
  */
 function slideShow() {
   // Set the source attribute of the background image to the current image in the sequence.
-  backgroundImage.src = `/images/background-${i + 1}.png`;
+  backgroundImage.src = `background-${i + 1}.png`;
 
   // Increment the image index, wrapping around to 0 if the index exceeds the number of images.
   if (i < 2) {
