@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loader Page-->
+    <div class="loader">
+        <p id="load-progress"></p>
+        <div class="progress-container" id="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+    </div>
+    <!-- Sidebar div -->
+    <div class="side-bar" id="side-bar">
+        <h1>Category</h1>
+        <div class="cat-link">
+            <ul>
+                <li><a href="#products" onclick="openSideBar()">Products</a></li>
+                <li><a href="#faq-section" onclick="openSideBar()">FAQ</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Container -->
+    <div class="container">
+        <header>
+            <div class="nav-bar">
+                <div class="left-side">
+                    <button id="menu-btn" onclick="openSideBar()">
+                        <img src="/images/hamburger-menu.png" alt="menu" height="50px" width="50px">
+                    </button>
+                    <h1 class="title">Meow Bundle Shop</h1>
+                </div>
+                <div class="nav-bar-link">
+                    <ul>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#faq-section">FAQ</a></li>
+                        <li><button id="login-btn" onclick="login()"><img src="/images/icon-profile.svg" alt=""
+                                    width="50px" height="50px"></button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Background Image and Text -->
+            <div class="background-image-text">
+                <img src="/images/background-1.png" alt="Background Image" id="background-image">
+                <div class="overlay-text">
+                    <p><strong>Welcome to Bundle Deals Shop</strong></p>
+                    <p>Amazing Savings on Bundles for Every Need!</p>
+                </div>
+            </div>
+        </header>
+        <main>
+            <!-- Login Form Container -->
+            <div class="login-container" id="login-form-container">
+                <span class="close-btn" onclick="closeForm()">X</span>
+                <h2 id="login-text">Login</h2>
+                <form onsubmit="submitForm()" id="login-form" method="post" action="login.php">
+                    <input type="text" class="input-field" placeholder="Username" id="username"><br>
+                    <input type="password" class="input-field" placeholder="Password" id="password" required><br>
+                    <button type="submit" class="submit-btn">Login</button>
+                </form>
+            </div>
+            <!-- Slideshow Container -->
+            <div class="slideshow-container" id="products">
+                <h1>Our Products</h1>
+                <div class="items-slideshow">
+                    <div class="track">
+                        <div class="fade product-card" id="product-1">
+                            <img src="/images/1.png" alt="product" class="product-image">
+                            <h3 class="product-name">Black Hoodie</h3>
+                            <p class="product-price">$432</p>
+                            <button class="add-to-cart-btn">Add to cart</button>
+                        </div>
+                        <div class="fade product-card" id="product-2">
+                            <img src="/images/2.png" alt="product" class="product-image">
+                            <h3 class="product-name">Black T-Shirt</h3>
+                            <p class="product-price">$355</p>
+                            <button class="add-to-cart-btn">Add to cart</button>
+                        </div>
+                        <div class="fade product-card" id="product-3">
+                            <img src="/images/3.png" alt="product" class="product-image">
+                            <h3 class="product-name">Black Wallet</h3>
+                            <p class="product-price">$121</p>
+                            <button class="add-to-cart-btn">Add to cart</button>
+                        </div>
+                        <div class="fade product-card" id="product-4">
+                            <img src="/images/4.png" alt="product" class="product-image">
+                            <h3 class="product-name">Black Shoes</h3>
+                            <p class="product-price">$655</p>
+                            <button class="add-to-cart-btn">Add to cart</button>
+                        </div>
+                        <div class="fade product-card" id="product-5">
+                            <img src="/images/5.png" alt="product" class="product-image">
+                            <h3 class="product-name">Blue Shirt</h3>
+                            <p class="product-price">$423</p>
+                            <button class="add-to-cart-btn">Add to cart</button>
+                        </div>
+                        <div class="fade product-card" id="product-6">
+                            <img src="/images/6.png" alt="Black Hoodie" class="product-image">
+                            <h3 class="product-name">Blue Shoes</h3>
+                            <p class="product-price">$199</p>
+                            <button class="add-to-cart-btn">Add to cart</button>
+                        </div>
+                        <div class="fade product-card" id="product-1">
+                            <img src="/images/1.png" alt="product" class="product-image">
+                            <h3 class="product-name">Black Hoodie</h3>
+                            <p class="product-price">$432</p>
+                            <button class="add-to-cart-btn">Add to cart</button>
+                        </div>
+                        <div class="fade product-card" id="product-2">
+                            <img src="/images/2.png" alt="product" class="product-image">
+                            <h3 class="product-name">Black T-Shirt</h3>
+                            <p class="product-price">$355</p>
+                            <button class="add-to-cart-btn">Add to cart</button>
+                        </div>
+                        <div class="fade product-card" id="product-3">
+                            <img src="/images/3.png" alt="product" class="product-image">
+                            <h3 class="product-name">Black Wallet</h3>
+                            <p class="product-price">$121</p>
+                            <button class="add-to-cart-btn">Add to cart</button>
+                        </div>
+                        <div class="fade product-card" id="product-4">
+                            <img src="/images/4.png" alt="product" class="product-image">
+                            <h3 class="product-name">Black Shoes</h3>
+                            <p class="product-price">$655</p>
+                            <button class="add-to-cart-btn">Add to cart</button>
+                        </div>
+                        <div class="fade product-card" id="product-5">
+                            <img src="/images/5.png" alt="product" class="product-image">
+                            <h3 class="product-name">Blue Shirt</h3>
+                            <p class="product-price">$423</p>
+                            <button class="add-to-cart-btn">Add to cart</button>
+                        </div>
+                        <div class="fade product-card" id="product-6">
+                            <img src="/images/6.png" alt="Black Hoodie" class="product-image">
+                            <h3 class="product-name">Blue Shoes</h3>
+                            <p class="product-price">$199</p>
+                            <button class="add-to-cart-btn">Add to cart</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- FAQ Section -->
+            <section class="faq" id="faq-section">
+                <h1>FAQs(Frequently Asked Questions)</h1>
+                <div class="faq-container">
+                    <div class="faq-question">
+                        <h2>What are bundle deals?</h2>
+                        <button class="collapsible" onclick="showFAQ(1)">
+                            <p id="arrow-1">
+                                &#8681;
+                            </p>
+                        </button>
+                    </div>
+                    <div class="content" id="faq-1">
+                        <p>Bundle deals are pre-selected packages of products sold together at a discounted price.
+                            Bundling allows us to pass on savings to you!" </p>
+                    </div>
+                </div>
+                <div class="faq-container">
+                    <div class="faq-question">
+
+                        <h2>How do I apply my discount?</h2>
+                        <button class="collapsible" onclick="showFAQ(2)">
+                            <p id="arrow-2">
+                                &#8681;
+                            </p>
+                        </button>
+                    </div>
+                    <div class="content" id="faq-2">
+                        <p>Discounts are automatically applied to your bundle during checkout. No promo code is
+                            necessary.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-container">
+                    <div class="faq-question">
+                        <h2>Do you offer free shipping?</h2>
+                        <button class="collapsible" onclick="showFAQ(3)">
+                            <p id="arrow-3">
+                                &#8681;
+                            </p>
+                        </button>
+                    </div>
+                    <div class="content" id="faq-3">
+                        <p>Yes! We offer free shipping on all bundle orders over $50.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer>
+            <p>
+                Copyright &copy; 2024; Designed by Aiman Karami
+            </p>
+        </footer>
+    </div>
+    <!-- Link to scripts -->
+    <script src="scripts.js"></script>
+</body>
+</html>
